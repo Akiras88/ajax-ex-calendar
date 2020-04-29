@@ -40,7 +40,8 @@ function printMonth(template, date) {
     var daysInMonth = date.daysInMonth();
 
     //  setta header
-    $('h1').html( date.format('MMMM YYYY') );
+    $('.month').html( date.format('MMMM') );
+    $('.year').html( date.format('YYYY') );
 
     // Imposta data attribute data visualizzata
     $('.month').attr('data-this-date',  date.format('YYYY-MM-DD'));
@@ -102,8 +103,9 @@ function monthNext(baseMonth, addMonth, template) {
         var nextMonth = baseMonth.add(1 , 'M');
         
         if ( nextMonth.year() > 2018 ) {
-            alert('Anno non disponibile');
+            addMonth.addClass('hide-switch');
         } else {
+            addMonth.removeClass('hide-switch');
             $('.month-list').html('');
             printMonth(template, nextMonth);
             printHoliday(nextMonth);
@@ -115,11 +117,14 @@ function monthPrev(baseMonth, subtractMonth, template) {
         var prevMonth = baseMonth.subtract(1 , 'M');
 
         if ( prevMonth.year() < 2018 ) {
-            alert('Anno non disponibile');
+            subtractMonth.addClass('hide-switch');
+            
         } else {
+            subtractMonth.removeClass('hide-switch');
             $('.month-list').html('');
             printMonth(template, prevMonth);
             printHoliday(prevMonth);
         }
     });
 }
+

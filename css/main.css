@@ -6,18 +6,47 @@
 
 body {
     font-family: sans-serif;
+    background: #000;
+    color: #fff;
 }
 
 .container {
     margin: 0 auto;
     text-align: center;
 }
-
-li.holiday {
-    color: red;
+/* header style */
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.date {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+.month {
+    font-weight: 800;
+    display: inline-block;
+    margin-bottom: 4px;
+    margin-right: 10px;
+}
+.switch {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    justify-content: space-between;
 }
 /* switch icon */
 .switch i {
     font-size: 25px;
     cursor: pointer;
+}
+.hide-switch {
+    opacity: 0;
+}
+
+li.holiday {
+    color: red;
 }

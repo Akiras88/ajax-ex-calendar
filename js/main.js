@@ -22,7 +22,7 @@ $(document).ready(function () {
     // ottieni festività mese corrente
     printHoliday(baseMonth);
 
-    // add or subtract month to push
+    // add or subtract month and holiday to push
     monthNext(baseMonth, addMonth, template);
     monthPrev(baseMonth, subtractMonth, template);
 
@@ -106,6 +106,7 @@ function monthNext(baseMonth, addMonth, template) {
         } else {
             $('.month-list').html('');
             printMonth(template, nextMonth);
+            printHoliday(nextMonth);
         }
     });
 }
@@ -118,6 +119,7 @@ function monthPrev(baseMonth, subtractMonth, template) {
         } else {
             $('.month-list').html('');
             printMonth(template, prevMonth);
+            printHoliday(prevMonth);
         }
     });
 }

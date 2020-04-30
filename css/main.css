@@ -7,12 +7,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Karla', sans-serif;
     background: #242526;
     color: #fff;
 }
+
 
 .container {
     display: flex;

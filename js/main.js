@@ -105,6 +105,7 @@ function monthNext(baseMonth, addMonth, template) {
         if ( nextMonth.year() > 2018 ) {
             addMonth.addClass('hide-switch');
         } else {
+            $('.switch i:first-child').removeClass('hide-switch');
             addMonth.removeClass('hide-switch');
             $('.month-list').html('');
             printMonth(template, nextMonth);
@@ -120,6 +121,7 @@ function monthPrev(baseMonth, subtractMonth, template) {
             subtractMonth.addClass('hide-switch');
             
         } else {
+            $('.switch i:last-child').removeClass('hide-switch');
             subtractMonth.removeClass('hide-switch');
             $('.month-list').html('');
             printMonth(template, prevMonth);

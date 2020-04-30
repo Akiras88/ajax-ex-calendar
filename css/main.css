@@ -51,6 +51,11 @@ body {
 .switch i {
     font-size: 25px;
     cursor: pointer;
+    transition: font-size .5s;
+}
+.switch i:hover {
+    color: #FC3428;
+    font-size: 30px;
 }
 .hide-switch { /* Jquery */
     opacity: 0;
